@@ -1,11 +1,11 @@
 import { Low } from 'lowdb';
 import { JSONFile } from 'lowdb/node';
-import { User } from '../models/User'; 
+import { Movie } from '../models/Movie';
 
-type Data = { users: User[] };
+type Data = { movies: Movie[] };
 
 const adapter = new JSONFile<Data>('db.json');
-const db = new Low<Data>(adapter, { users: [] });
+const db = new Low<Data>(adapter, { movies: [] });
 
 export async function initDb() {
   await db.read();
