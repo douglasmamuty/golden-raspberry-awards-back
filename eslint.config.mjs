@@ -1,5 +1,6 @@
 import tseslint from 'typescript-eslint';
 import js from '@eslint/js';
+import eslintPluginPrettier from 'eslint-plugin-prettier';
 
 export default tseslint.config(
   js.configs.recommended,
@@ -15,6 +16,7 @@ export default tseslint.config(
     },
     plugins: {
       '@typescript-eslint': tseslint.plugin,
+      prettier: eslintPluginPrettier,
     },
     rules: {
       'no-unused-vars': 'warn',
@@ -22,6 +24,7 @@ export default tseslint.config(
       '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
       '@typescript-eslint/explicit-function-return-type': 'off',
       '@typescript-eslint/no-explicit-any': 'off',
+      'prettier/prettier': 'warn',
     },
     ignores:[
      ".husky/",
