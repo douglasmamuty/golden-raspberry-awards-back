@@ -6,7 +6,6 @@ API RESTful desenvolvida em Node.js com TypeScript para fornecer dados sobre os 
 
 ### 🚀 Features
 
-- CRUD básico de filmes
 - Paginação com filtros (por ano, vencedor, etc)
 - Projeções especiais:
   - Anos com múltiplos vencedores
