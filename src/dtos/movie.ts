@@ -1,8 +1,8 @@
 import { z } from 'zod';
 
 export const listMoviesQuerySchema = z.object({
-  page: z.string().optional().default('1'),
-  size: z.string().optional().default('10'),
+  page: z.string().optional(),
+  size: z.string().optional(),
   year: z.string().optional(),
   winner: z.string().optional(),
   projection: z.string().optional(),

@@ -15,7 +15,8 @@ export function getStudiosWithWinCount(movies: Movie[]): StudiosWithWinCount {
   const result: StudiosWithWinCount = {
     studios: Object.entries(studioWins)
       .map(([name, winCount]) => ({ name, winCount }))
-      .sort((a, b) => b.winCount - a.winCount),
+      .sort((a, b) => b.winCount - a.winCount)
+      .slice(0, 3),
   };
 
   return result;
