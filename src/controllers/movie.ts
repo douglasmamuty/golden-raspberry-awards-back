@@ -16,8 +16,8 @@ export const listMovies = async (
   const { page, size, year, winner, projection } = parsed.data;
 
   const result = await listMovieService({
-    page: parseInt(page),
-    size: parseInt(size),
+    page: page === undefined ? page : parseInt(page),
+    size: size === undefined ? size : parseInt(size),
     year,
     winner,
     projection,

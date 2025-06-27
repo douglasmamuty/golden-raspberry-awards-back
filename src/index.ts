@@ -7,9 +7,11 @@ import swaggerUi from 'swagger-ui-express';
 import { swaggerSpec } from './docs/swagger';
 import { errorHandler } from './errors/errorHandler';
 import { seedMoviesFromCSV } from './seed/movies';
+import cors from 'cors';
 
 const app = express();
 app.use(express.json());
+app.use(cors());
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 app.use(routes);
 app.use(errorHandler);

@@ -9,8 +9,8 @@ import {
 import { ListMoviesResult, PaginatedMovies } from './response/movieResponse';
 
 interface FilterParams {
-  page: number;
-  size: number;
+  page: number | undefined;
+  size: number | undefined;
   year?: string;
   winner?: string;
   projection?: string;
@@ -48,8 +48,8 @@ export async function listMovieService({
     movies = movies.filter((movie) => String(movie.winner) === String(winner));
   }
 
-  if (page) {
-    const start = (page - 1) * size;
+  if (page !== undefined && size !== undefined) {
+    const start = page * size;
     const end = start + size;
     const totalElements = movies.length;
     const totalPages = Math.ceil(totalElements / size);
