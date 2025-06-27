@@ -1,7 +1,7 @@
 ---
 ## 📘 Golden Raspberry Awards API
 
-API RESTful desenvolvida em Node.js com TypeScript para fornecer dados sobre os vencedores do "Framboesa de Ouro". O projeto suporta filtros, paginação, projeções personalizadas e segue boas práticas de arquitetura.
+API RESTful desenvolvida em Node.js com TypeScript para fornecer dados sobre os vencedores do Golden Raspberry Awards. O projeto suporta filtros, paginação, projeções personalizadas e segue boas práticas de arquitetura.
 ---
 
 ### 🚀 Features
