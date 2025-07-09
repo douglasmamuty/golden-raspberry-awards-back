@@ -8,18 +8,18 @@ import {
 } from './projections';
 import { ListMoviesResult, PaginatedMovies } from './response/movieResponse';
 
-interface FilterParams {
-  page: number | undefined;
-  size: number | undefined;
-  year?: string;
-  winner?: string;
-  projection?: string;
-}
-
-enum ProjectionType {
+export enum ProjectionType {
   MAX_MIN_INTERVAL = 'max-min-win-interval-for-producers',
   MULTIPLE_WIN_YEARS = 'years-with-multiple-winners',
   STUDIOS_WITH_WIN_COUNT = 'studios-with-win-count',
+}
+
+interface FilterParams {
+  page?: number;
+  size?: number;
+  year?: string;
+  winner?: string;
+  projection?: ProjectionType;
 }
 
 export async function listMovieService({

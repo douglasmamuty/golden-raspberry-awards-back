@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import { listMoviesQuerySchema } from '../dtos/movie';
-import { listMovieService } from '../services/movie/movie';
+import { listMovieService, ProjectionType } from '../services/movie/movie';
 
 export const listMovies = async (
   req: Request,
@@ -20,7 +20,7 @@ export const listMovies = async (
     size: size === undefined ? size : parseInt(size),
     year,
     winner,
-    projection,
+    projection: projection as ProjectionType,
   });
 
   res.status(200).json(result);

@@ -79,3 +79,25 @@ src/
 ├── types/
 ```
 
+### 🧪 Testes de Integração
+
+Este projeto utiliza **Jest** para rodar os testes de integração com banco de dados em memória (`lowdb`).
+Certifique-se de que você executou a instalação das dependências:
+
+```bash
+npm install
+```
+
+### ▶️ Rodar os testes
+
+Para executar todos os testes (incluindo integração):
+
+```bash
+npm run test
+```
+
+Esse comando irá:
+
+- Limpar o banco de dados em memória antes de cada teste.
+- Carregar os dados da planilha `movielist.csv`.
+- Executar os testes de integração do serviço `listMovieService`.

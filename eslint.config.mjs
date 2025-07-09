@@ -13,6 +13,22 @@ export default tseslint.config(
         sourceType: 'module',
         ecmaVersion: 'latest',
       },
+      globals: {
+        // substitui "env: { node: true, jest: true }"
+        process: true,
+        module: true,
+        require: true,
+        __dirname: true,
+        describe: true,
+        test: true,
+        it: true,
+        expect: true,
+        beforeEach: true,
+        afterEach: true,
+        beforeAll: true,
+        afterAll: true,
+        jest: true,
+      },
     },
     plugins: {
       '@typescript-eslint': tseslint.plugin,
@@ -26,10 +42,10 @@ export default tseslint.config(
       '@typescript-eslint/no-explicit-any': 'off',
       'prettier/prettier': 'warn',
     },
-    ignores:[
-     ".husky/",
-      "*.config.*", 
-      "db.json"
-    ]
+    ignores: [
+      '.husky/',
+      '*.config.*',
+      'db.json',
+    ],
   }
 );

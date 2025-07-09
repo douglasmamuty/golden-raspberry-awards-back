@@ -15,7 +15,11 @@ export function loadCSV(filePath: string): any[] {
       skip_empty_lines: true,
     });
   } catch (e) {
-    console.error('❌ Erro ao carregar CSV:', e.message);
-    process.exit(1);
+    if (e instanceof Error) {
+      console.error('❌ Erro ao carregar CSV:', e.message);
+    } else {
+      console.error('❌ Erro desconhecido ao carregar CSV:', e);
+    }
   }
+  return [];
 }
