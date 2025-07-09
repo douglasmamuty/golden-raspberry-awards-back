@@ -7,7 +7,7 @@ export async function seedMoviesFromCSV() {
   let counter = 0;
   if (existing.length > 0) return;
 
-  const rows = loadCSV('../data/movielist.csv');
+  const rows = await loadCSV('../data/movielist.csv');
 
   const movies = rows.map((row: any): Movie => {
     counter += 1;
