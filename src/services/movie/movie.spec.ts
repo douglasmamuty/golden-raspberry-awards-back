@@ -14,7 +14,7 @@ describe('Integration - listMovieService with seeded DB', () => {
 
     expect(Array.isArray(result)).toBe(true);
     if (Array.isArray(result)) {
-      expect(result.length).toBeGreaterThan(0); // assuming CSV has data
+      expect(result.length).toBeGreaterThan(0); 
     }
   });
 
